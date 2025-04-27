@@ -79,7 +79,7 @@ int	graphic_handle(t_data *data)
 {
 	if (init_values(data))
 		return (1);
-	data->door_texture = mlx_load_png("./textures/door.png");
+	data->door_texture = mlx_load_png(DOOR_PATH);
 	if (!data->door_texture)
 		return (error_mlx(data), 1);
 	data->window->mlx = mlx_init(WIDTH, HEIGHT, "Cub3D", true);

@@ -28,5 +28,5 @@ void	clean_close(t_data *data)
 			mlx_delete_texture(data->wall_texture[i]);
 	clean_up(&data->allocation);
 	free(data);
-	exit(1);
+	exit(0);
 }

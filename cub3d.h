@@ -29,6 +29,7 @@
 
 # define FOV 60
 # define N_RAYS WIDTH
+# define DOOR_PATH "./textures/door.png"
 
 typedef struct s_allocate
 {

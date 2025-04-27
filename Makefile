@@ -41,11 +41,13 @@ $(NAME): ${OBJS}
 	@printf "\r\033[K\033[33mcub3d compiled\033[0m\n"
 
 clean:
-	rm -f ${OBJS}
+	@rm -f ${OBJS}
+	@printf "\r\033[K\033[33mcleaning objects completed\033[0m\n"
 
 fclean: 	clean
-	rm -f $(NAME)
-	rm -rf obj
+	@rm -f $(NAME)
+	@rm -rf obj
+	@printf "\r\033[K\033[33mcleaning completed\033[0m\n"
 
 re:		fclean all
 
