@@ -19,19 +19,15 @@ void	f_c_autolum(t_data *data, char c_f, int f_i)
 	h = (double)HEIGHT;
 	if (c_f == 'c')
 	{
-		(data->hold_lamp % 2 != 0) && (data->c_lum = 30);
-		(data->hold_lamp % 2 == 0) && (data->c_lum = 50);
+		(data->hold_lamp % 2 != 0) && (data->c_lum = 40);
+		(data->hold_lamp % 2 == 0) && (data->c_lum = 60);
 	}
 	if (c_f == 'f')
 	{
 		(data->hold_lamp % 2 != 0)
 			&& (data->f_lum = (f_i / h) * 100);
 		(data->hold_lamp % 2 == 0)
-			&& (data->f_lum = (f_i / h) * 70);
-		(data->hold_lamp % 2 != 0)
-			&& (data->f_lum <= 60) && (data->f_lum = 100 * (f_i / h));
-		(data->hold_lamp % 2 == 0)
-			&& (data->f_lum = data->c_lum);
+			&& (data->f_lum = (f_i / h) * 80);
 	}
 }
 
@@ -118,13 +114,9 @@ void	draw_door(t_data *data, int r_i, double top_pix, double bot_pix)
 void	draw(t_data *data, int r_i, double top_pix, double bot_pix)
 {
 	(data->hold_lamp % 2 != 0)
-		&& (data->lum = 100 - data->ray[r_i]->ray_dst / 7);
+		&& (data->lum = 100 - data->ray[r_i]->ray_dst / 50);
 	(data->hold_lamp % 2 == 0)
-		&& (data->lum = 100 - data->ray[r_i]->ray_dst / 2);
-	(data->hold_lamp % 2 != 0)
-		&& (data->lum = 100 - data->ray[r_i]->ray_dst / 30);
-	(data->hold_lamp % 2 == 0)
-		&& (data->lum = data->c_lum);
+		&& (data->lum = 100 - data->ray[r_i]->ray_dst / 10);
 	(data->lum < 0) && (data->lum = 0);
 	if (data->ray[r_i]->element_hitt == '1')
 		draw_walls(data, r_i, top_pix, bot_pix);
