@@ -1,6 +1,7 @@
 # Cub3D
 
 This project is about creating a small 3D game in C using raycasting and the MLX42 library.
+in assossiation with: [Marin](https://github.com/marn11)
 
 ![Demo](demo.gif)
 
@@ -8,25 +9,25 @@ This project is about creating a small 3D game in C using raycasting and the MLX
 
 ### 1. Clone MLX42
 
-            git clone https://github.com/codam-coding-college/MLX42.git
+git clone https://github.com/codam-coding-college/MLX42.git
 
 
 ### 2. Build MLX
 
-            cd MLX42
-            cmake -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ .
-            make
-            cd ..
+cd MLX42
+cmake -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ .
+make
+cd ..
 
 ### 3. Build Cub3D
 
-            make
+make
 
 ### 4. Run the Game
 
-            ./cub3D maps/map.cub
+./cub3D maps/map.cub
 
-     Press space to take the Torch, look to Controls to know the keys
+     . Press space to take the Torch, look to Controls to know the keys
 
 
 
